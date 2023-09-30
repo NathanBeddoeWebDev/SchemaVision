@@ -2,12 +2,13 @@
   "name": "tauri-astro-app",
   "private": true,
   "version": "1.0.7",
+  "Description": "¿What if the god of perfect language, Rust, and the god of the web, Typescript, had a baby? Well, this is it, Tauri + Astro, the perfect combination to make the web a whole new world.",
   "scripts": {
-    "dev": "vite dev",
-    "start": "vite dev",
-    "build": "vite build",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
-    "vite": "vite",
+    "astro": "astro",
     "tauri": "tauri",
     "clean": "rm -rf dist && rm -rf tauri/target && rm -rf tauri/src-tauri"
   },
@@ -24,24 +25,18 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.6",
     "@rspc/client": "^0.1.3",
-    "@rspc/react": "^0.1.3",
     "@rspc/tauri": "^0.1.3",
-    "@tanstack/react-query": "^4.35.3",
-    "@tanstack/react-router": "beta",
     "@tanstack/react-virtual": "beta",
     "@tauri-apps/api": "latest",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react-swc": "^3.4.0",
     "astro": "^3.0.8",
-    "autoprefixer": "^10.4.16",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "codemirror": "^6.0.1",
     "lucide-react": "^0.274.0",
     "monaco-editor": "^0.43.0",
     "nanostores": "^0.9.3",
-    "postcss": "^8.4.31",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-hook-form": "^7.46.2",
@@ -58,6 +53,7 @@
   },
   "keywords": [
     "tauri",
+    "astro",
     "rust",
     "typescript",
     "web",
@@ -68,6 +64,17 @@
     "react",
     "vue"
   ],
-  "author": "Nathan Beddoe",
-  "license": "MIT"
+  "author": "Miguel Gargallo",
+  "homepage": "https://github.com/miguelgargallo/tauri-astro-app",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelgargallo/tauri-astro-app.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "bugs": {
+    "url": "https://github.com/microsoft/vscode/issues"
+  }
 }
