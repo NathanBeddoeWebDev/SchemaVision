@@ -1,0 +1,42 @@
+{
+  "base": "vs",
+  "inherit": true,
+  "rules": [
+    {
+      "foreground": "YOUR_TEXT_COLOR",
+      "token": "comment"
+    },
+    {
+      "foreground": "YOUR_KEYWORD_COLOR",
+      "token": "keyword"
+    },
+    {
+      "foreground": "YOUR_STRING_COLOR",
+      "token": "string"
+    },
+    {
+      "foreground": "YOUR_NUMBER_COLOR",
+      "token": "number"
+    },
+    {
+      "foreground": "YOUR_FUNCTION_COLOR",
+      "token": "function"
+    },
+    {
+      "foreground": "YOUR_VARIABLE_COLOR",
+      "token": "variable"
+    },
+    {
+      "foreground": "YOUR_OPERATOR_COLOR",
+      "token": "operator"
+    },
+    {
+      "foreground": "YOUR_TYPE_COLOR",
+      "token": "type"
+    }
+  ],
+  "colors": {
+    "editor.background": "#000000",
+    "editor.foreground": "#FFFFFF"
+  }
+}

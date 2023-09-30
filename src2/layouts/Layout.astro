@@ -1,0 +1,28 @@
+---
+import Sidebar from "../../src/components/Sidebar";
+import App from "../../src/components/App"
+import "@/styles/globals.css";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+        <main class="h-screen pl-64 overflow-auto">
+            <slot />
+        </main>
+  </body>
+</html>

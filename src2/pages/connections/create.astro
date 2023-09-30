@@ -1,0 +1,10 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {ConnectionForm} from "../../../src/components/ConnectionForm";
+---
+
+<Layout title="Welcome to Astro.">
+    <div class="w-full bg-background h-screen flex flex-col justify-center max-h-screen">
+        <ConnectionForm client:load></ConnectionForm>
+    </div>
+</Layout>

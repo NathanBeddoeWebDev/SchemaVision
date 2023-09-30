@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Editor from "../../src/components/Editor";
+import DataTable from "../../src/components/DataTable";
+import EditorMenu from "../../src/components/EditorMenu";
+---
+
+<Layout title="Welcome to Astro.">
+  <div
+    class="w-full bg-background h-screen flex flex-col max-h-screen overflow-auto"
+  >
+    <EditorMenu client:load />
+    <Editor />
+    <div
+      class="border-b-accent border-b-2 flex-1 text-foreground overflow-auto"
+    >
+      <DataTable client:load />
+    </div>
+  </div>
+</Layout>
