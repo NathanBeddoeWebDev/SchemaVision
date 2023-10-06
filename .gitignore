@@ -37,3 +37,7 @@ node_modules/
 .env
 .env.production
 .env.local
+
+# rust
+target/
+Cargo.lock

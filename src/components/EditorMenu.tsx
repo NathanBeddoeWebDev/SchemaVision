@@ -4,8 +4,6 @@ import {
     MenubarContent,
     MenubarItem,
     MenubarMenu,
-    MenubarRadioGroup,
-    MenubarRadioItem,
     MenubarSeparator,
     MenubarShortcut,
     MenubarSub,
@@ -14,8 +12,9 @@ import {
     MenubarTrigger,
 } from "@/components/ui/menubar"
 import {Button} from "@/components/ui/button.tsx";
-import {Pause, Play, PlayIcon, PlaySquare, Square} from "lucide-react";
+import {Play, Square} from "lucide-react";
 import {Separator} from "@/components/ui/separator.tsx";
+import router from "@/lib/router.ts";
 
 export default function EditorMenu() {
     return (
@@ -32,7 +31,7 @@ export default function EditorMenu() {
                     <MenubarItem>
                         Open Query <MenubarShortcut>⌘O</MenubarShortcut>
                     </MenubarItem>
-                    <MenubarSeparator />
+                    <MenubarSeparator/>
                     <MenubarItem>
                         Print... <MenubarShortcut>⌘P</MenubarShortcut>
                     </MenubarItem>
@@ -47,18 +46,18 @@ export default function EditorMenu() {
                     <MenubarItem>
                         Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
                     </MenubarItem>
-                    <MenubarSeparator />
+                    <MenubarSeparator/>
                     <MenubarSub>
                         <MenubarSubTrigger>Find</MenubarSubTrigger>
                         <MenubarSubContent>
                             <MenubarItem>Search the web</MenubarItem>
-                            <MenubarSeparator />
+                            <MenubarSeparator/>
                             <MenubarItem>Find...</MenubarItem>
                             <MenubarItem>Find Next</MenubarItem>
                             <MenubarItem>Find Previous</MenubarItem>
                         </MenubarSubContent>
                     </MenubarSub>
-                    <MenubarSeparator />
+                    <MenubarSeparator/>
                     <MenubarItem>Cut</MenubarItem>
                     <MenubarItem>Copy</MenubarItem>
                     <MenubarItem>Paste</MenubarItem>
@@ -71,16 +70,16 @@ export default function EditorMenu() {
                     <MenubarCheckboxItem checked>
                         Always Show Full URLs
                     </MenubarCheckboxItem>
-                    <MenubarSeparator />
+                    <MenubarSeparator/>
                     <MenubarItem inset>
                         Reload <MenubarShortcut>⌘R</MenubarShortcut>
                     </MenubarItem>
                     <MenubarItem disabled inset>
                         Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
                     </MenubarItem>
-                    <MenubarSeparator />
+                    <MenubarSeparator/>
                     <MenubarItem inset>Toggle Fullscreen</MenubarItem>
-                    <MenubarSeparator />
+                    <MenubarSeparator/>
                     <MenubarItem inset>Hide Sidebar</MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
@@ -88,7 +87,10 @@ export default function EditorMenu() {
             <Button title={"Execute SQL"} variant={"ghost"}><Play className={"w-5 h-5 text-green-500"}></Play></Button>
             <Separator orientation={"vertical"}></Separator>
             <Button title={"Stop SQL"} variant={"ghost"}><Square className={"w-5 h-5 text-red-500"}></Square></Button>
+            <span className={"ml-auto"}>
+                {router.state.location.pathname}
 
+            </span>
         </Menubar>
     )
 }

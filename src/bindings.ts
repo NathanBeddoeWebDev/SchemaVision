@@ -3,12 +3,12 @@
 
 export type Procedures = {
     queries: 
-        { key: "connections", input: never, result: Connection[] },
+        { key: "connections", input: number | null, result: Connection[] },
     mutations: 
         { key: "connections", input: Connection, result: null },
     subscriptions: never
 };
 
-export type Connection = { id: number | null; dbms: DBMS; name: string; host: string; port: number; user: string; password: string; default_database: string; default_schema: string; ssl: boolean; ssl_ca: string; ssl_cert: string; ssl_key: string; ssl_pass: string; ssl_mode: string }
+export type Connection = { id: number | null; dbms: DBMS; name: string; host: string; port: number; user: string; password: string; default_database: string; default_schema: string; connection_string: string | null; ssl: boolean; ssl_ca: string; ssl_cert: string; ssl_key: string; ssl_pass: string; ssl_mode: string }
 
 export type DBMS = "MySQL" | "PostgreSQL" | "SQLite" | "SQLServer" | "MariaDB"

@@ -1,21 +1,14 @@
 import {
     Menubar,
-    MenubarCheckboxItem,
     MenubarContent,
     MenubarItem,
     MenubarMenu,
-    MenubarRadioGroup,
-    MenubarRadioItem,
     MenubarSeparator,
     MenubarShortcut,
-    MenubarSub,
-    MenubarSubContent,
-    MenubarSubTrigger,
     MenubarTrigger,
 } from "@/components/ui/menubar"
-import {PlusCircleIcon, PlusIcon} from "lucide-react";
+import {PlusIcon} from "lucide-react";
 import {Button} from "@/components/ui/button.tsx";
-import {Separator} from "@/components/ui/separator.tsx";
 
 export default function WorkspaceMenu() {
     return (
@@ -39,7 +32,7 @@ export default function WorkspaceMenu() {
                     <MenubarItem>
                         Open Query <MenubarShortcut>⌘O</MenubarShortcut>
                     </MenubarItem>
-                    <MenubarSeparator />
+                    <MenubarSeparator/>
                     <MenubarItem>
                         Print... <MenubarShortcut>⌘P</MenubarShortcut>
                     </MenubarItem>
